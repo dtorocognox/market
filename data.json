@@ -1,9 +1,8 @@
-[
+
   {
     "name": "David",
     "lastName": "Toro",
-    "password": "david123"
+    "password": "david123",
     "email": "dtoro@cognox.com"
   }
 
-]

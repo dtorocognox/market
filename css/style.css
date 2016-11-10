@@ -15,7 +15,7 @@ header{
 }
 
 h1{
-    margin-top: 0;
+    margin: 0;
     padding: 10px;
 }
 
@@ -53,5 +53,28 @@ h1{
 #sidebar{
     padding: 20px;
     width: 200px;
+    height: 100%;
     background-color: gainsboro;
+}
+
+#views{
+    display: inline-flex;
+}
+
+#view2{
+    padding-left: 10%;
+}
+
+#home{
+    padding: 40px;
+}
+
+#homeOption{
+    display: flex;
+    text-decoration: none;
+}
+
+.homeOptions{
+    display: table-caption;
+    padding: 20px;
 }

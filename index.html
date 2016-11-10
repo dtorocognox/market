@@ -2,7 +2,7 @@
 <html lang="en" ng-app="market">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Index</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -13,7 +13,9 @@
     <header>
         <h1>Market</h1>
     </header>
-    <div ui-view="subview1"></div>
-
+    <div id="views">
+        <div ui-view="subview1"></div>
+        <div ui-view="subview2" id="view2"></div>
+    </div>
 </body>
 </html>

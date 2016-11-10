@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="login">
-        <form app-contrller="login">
+        <form ng-controller="login">
             <div id="logintitle">User Access</div>
             <div>
                 <span>Email: </span>
@@ -21,12 +21,14 @@
             </div>
             <span>Password: </span>
             <span>
-            <input type="password" placeholder=" ********" ng-model="pass"/>
+            <input type="password" placeholder=" ********" ng-model="pass" ngif="pass== data.password"/>
+                <div ng-if="!(pass== data.password)">{{pass + " = " + data.password}}</div>
         </span>
             <div>
-                <input type="submit" value="login" id="loginButton" ngif="pass == ">
+                <a ng-click="password(pass)" ui-sref="{{homes}}"><input type="submit" value="login" id="loginButton"></a>
             </div>
         </form>
     </div>
+    <a ui-sref="home">Estado1</a>
 </body>
 </html>
