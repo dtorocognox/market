@@ -1,0 +1,57 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+body:only-child{
+    margin: auto;
+}
+
+header{
+    background-color: gainsboro;
+    text-align: center;
+}
+
+h1{
+    margin-top: 0;
+    padding: 10px;
+}
+
+#login{
+    position: absolute;
+    background-color: gainsboro;
+    text-align: center;
+    width: 600px;
+    height: 200px;
+    top: 25%;
+    left: 26%;
+}
+
+#logintitle{
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#loginButton{
+    position: absolute;
+    right: 30%;
+    margin-top: 2%;
+}
+
+#email{
+    margin-left: 33px;
+    margin-bottom: 10px;
+}
+
+
+#options{
+    display: table-caption;
+}
+
+#sidebar{
+    padding: 20px;
+    width: 200px;
+    background-color: gainsboro;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="market">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../js/code.js"></script>
+</head>
+<body>
+    <div id="login">
+        <form app-contrller="login">
+            <div id="logintitle">User Access</div>
+            <div>
+                <span>Email: </span>
+                <span>
+                <input type="email" placeholder=" name@email.com" id="email"/>
+            </span>
+            </div>
+            <span>Password: </span>
+            <span>
+            <input type="password" placeholder=" ********" ng-model="pass"/>
+        </span>
+            <div>
+                <input type="submit" value="login" id="loginButton" ngif="pass == ">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

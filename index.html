@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="market">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="js/code.js"></script>
 </head>
 <body>
     <header>
-        <h1>Tienda Online</h1>
+        <h1>Market</h1>
     </header>
+    <div ui-view="subview1"></div>
+
 </body>
 </html>
