@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <!--<link rel="stylesheet" href="../css/style.css">-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="../js/code.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="login">
+    <div id="login" class="panel panel-default">
         <form ng-controller="login">
             <div id="logintitle">User Access</div>
             <div>
@@ -21,11 +23,11 @@
             </div>
             <span>Password: </span>
             <span>
-            <input type="password" placeholder=" ********" ng-model="pass" ngif="pass== data.password"/>
+            <input type="password" placeholder=" ********" ng-model="pass"/>
                 <div ng-if="!(pass== data.password)">{{pass + " = " + data.password}}</div>
         </span>
             <div>
-                <a ng-click="password(pass)" ui-sref="{{homes}}"><input type="submit" value="login" id="loginButton"></a>
+                <input type="submit" value="login" id="loginButton"  ng-click="password(pass)" ui-sref="{{homes}}">
             </div>
         </form>
     </div>

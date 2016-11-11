@@ -4,11 +4,9 @@ app.controller('login', function ($scope, $http) {
     $http.get("data.json")
         .success(function (data) {
             $scope.data = data;
-            var datas = data;
         })
     .error(function (err) {
-        var datas = err;
-        console.log(datas);
+        console.log(err);
     });
 
     $scope.homes = "login";
@@ -21,10 +19,14 @@ app.controller('login', function ($scope, $http) {
         }
 
     }
-    $scope.go = function(state) {
-        $state.go(state);
-        console.log("entro");
-    }
+});
+
+app.controller('profile', function ($scope, $http) {
+    $http.get("https://restcountries.eu/rest/v1/all")
+        .success(function (countries) {
+            $scope.countries = countries;
+        });
+
 });
 
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -46,6 +48,39 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 },
                 "subview2":{
                     templateUrl: "html/home.html"
+                }
+            }
+        })
+        .state('orders', {
+            url: "/myorders",
+            views: {
+                "subview1": {
+                    templateUrl: "html/sidebar.html"
+                },
+                "subview2": {
+                    templateUrl: "html/orders.html"
+                }
+            }
+        })
+        .state('favorites', {
+            url: "/myfavorites",
+            views: {
+                "subview1": {
+                    templateUrl: "html/sidebar.html"
+                },
+                "subview2": {
+                    templateUrl: "html/favorites.html"
+                }
+            }
+        })
+        .state('profile', {
+            url: "/myprofile",
+            views: {
+                "subview1": {
+                    templateUrl: "html/sidebar.html"
+                },
+                "subview2": {
+                    templateUrl: "html/profile.html"
                 }
             }
         });

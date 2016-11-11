@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="market">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../js/code.js"></script>
+</head>
+<body>
+    <h2>My Profile</h2>
+    <form ng-controller="profile">
+        <div>
+            <h4>Full Name</h4>
+            <input type="text" class="input100"/>
+        </div>
+        <div>
+            <h4>Email</h4>
+            <input type="email" class="input100"/>
+        </div>
+        <div class="inputH">
+            <div>
+                <h4>Password</h4>
+                <input type="password"/>
+            </div>
+            <div>
+                <h4>Repeat Password</h4>
+                <input type="password">
+            </div>
+        </div>
+        <div>
+            <h4>Address</h4>
+            <input type="text" class="input100"/>
+        </div>
+        <div class="inputH">
+            <div>
+                <h4>Country</h4>
+                <select>
+                    <option ng-repeat="country in countries">{{country.name}}</option>
+                </select>
+            </div>
+            <div>
+                <h4>City</h4>
+                <select>
+                    <option>option1</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
